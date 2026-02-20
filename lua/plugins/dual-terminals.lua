@@ -80,11 +80,11 @@ return {
           -- Save current window
           local current_win = vim.api.nvim_get_current_win()
 
-          -- Create right split (20% width)
+          -- Create right split (25% width)
           vim.cmd("botright vsplit")
           state.right_win = vim.api.nvim_get_current_win()
           vim.api.nvim_win_set_buf(state.right_win, state.right_buf)
-          vim.api.nvim_win_set_width(state.right_win, math.floor(vim.o.columns * 0.20))
+          vim.api.nvim_win_set_width(state.right_win, math.floor(vim.o.columns * 0.25))
 
           -- Disable line numbers and optimize for terminal rendering
           vim.api.nvim_win_set_option(state.right_win, 'number', false)
